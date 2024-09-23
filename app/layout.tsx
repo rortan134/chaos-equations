@@ -3,11 +3,13 @@ import { Theme } from "@radix-ui/themes";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata, Viewport } from "next";
 
+export const dynamic = "force-static";
+
 const WEBSITE_URL = "http://localhost:3000";
-const APP_NAME = "Chaos equations";
+const APP_NAME = "Simulations";
 
 const title = `${APP_NAME}`;
-const description = "Chaos equations dynamic system";
+const description = "Simulations";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -72,7 +74,6 @@ export default function RootLayout({
       lang="en"
       dir="ltr"
       tabIndex={-1}
-      suppressHydrationWarning
       className={GeistSans.variable}
     >
       <body className="dark">
@@ -80,7 +81,6 @@ export default function RootLayout({
           accentColor="ruby"
           grayColor="sage"
           panelBackground="solid"
-          scaling="95%"
           radius="full"
           appearance="dark"
         >
